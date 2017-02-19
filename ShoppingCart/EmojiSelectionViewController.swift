@@ -21,12 +21,11 @@ class EmojiSelectionViewController: UIViewController {
         let firstInput = firstText.text
         let secondInput = secondText.text
         let newTuple: (String,String) = (firstInput!, secondInput!)
-        emojiDelegate?.create(emojiGroup: newTuple)
+        emojiDelegate?.create(newTuple)
         dismiss(animated: true, completion: nil)
     }
     
-    let destVC = segue.destination as! EmojiSelectionViewController
-    destVC.emojiDelegate = self
+   
     
     
     
