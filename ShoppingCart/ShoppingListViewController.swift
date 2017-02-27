@@ -5,12 +5,11 @@
 //  Created by Jim Campagno on 8/10/16.
 //  Copyright © 2016 Gamesmith, LLC. All rights reserved.
 //
-
 import UIKit
 
-
-// TODO: Create protocol here.
-
+protocol EmojiCreation {
+    func create(emojiGroup:(String, String))
+}
 
 class ShoppingViewController: UIViewController {
     
@@ -43,10 +42,27 @@ extension ShoppingViewController: UITableViewDataSource {
         cell.secondEmojiLabel.text = currentEmojiLove.1
         return cell
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "EmojiSegue" {
+            let destVC = segue.destination as! EmojiSelectionViewController
+            //this makes the destVC adhere to the emojiCreation protocol; self = current instance of ShoppingListViewController
+            destVC.emojiDelegate = self
+        }
+    }
 }
 
 // MARK: - UITableViewDelegate Methods
 extension ShoppingViewController: UITableViewDelegate { }
+
+extension ShoppingViewController: EmojiCreation {
+   func create(emojiGroup: (String, String)) {
+        emojis.append(emojiGroup)
+        //this updates the table data; it is a didSet observer to our emojis instance property
+        tableView.reloadData()
+    }
+}
 
 
 
