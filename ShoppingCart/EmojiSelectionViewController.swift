@@ -10,9 +10,29 @@ import UIKit
 
 class EmojiSelectionViewController: UIViewController {
     
+    
+    @IBOutlet weak var leftTextField: UITextField!
+    
+    @IBOutlet weak var rightTextField: UITextField!
+    
+    var emojiDelegate: EmojiCreation?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(red:0.22, green:0.33, blue:0.58, alpha:1.00)
     }
     
+    
+    @IBAction func saveButton(_ sender: Any) {
+        
+        let emojis1 = leftTextField.text
+        let emojis2 = rightTextField.text
+        
+        emojiDelegate?.create(emojiGroup: (emojis1!, emojis2!))
+        dismiss(animated: true, completion: nil)
+        }
 }
+
+    
+    
+
