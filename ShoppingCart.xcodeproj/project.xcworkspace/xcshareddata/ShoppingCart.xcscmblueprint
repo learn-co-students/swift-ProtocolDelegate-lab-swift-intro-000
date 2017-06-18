@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "C809F53E54A43152D8DE5DC3273AB9EEA9CB8486",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "C809F53E54A43152D8DE5DC3273AB9EEA9CB8486" : 9223372036854775807,
+    "C20CEFC634DAA471A5E87E9DC843E3BBC3FBC843" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "99AD5D2D-ADF7-48E3-A5A3-370F787D0F49",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "C809F53E54A43152D8DE5DC3273AB9EEA9CB8486" : "swift-ProtocolDelegate-lab-swift-intro-000\/",
+    "C20CEFC634DAA471A5E87E9DC843E3BBC3FBC843" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "ShoppingCart",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ShoppingCart.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/saroar\/swift-ProtocolDelegate-lab-swift-intro-000.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C20CEFC634DAA471A5E87E9DC843E3BBC3FBC843"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/saroar\/swift-ProtocolDelegate-lab-swift-intro-000.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C809F53E54A43152D8DE5DC3273AB9EEA9CB8486"
+    }
+  ]
+}
