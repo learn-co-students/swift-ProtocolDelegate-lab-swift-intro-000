@@ -18,9 +18,12 @@ class EmojiSelectionViewController: UIViewController {
     }
     
     @IBAction func saveButton(_ sender: Any) {
-        let leftText = leftTextField.text
-        let rightText = rightTextField.text
-        create(emojiGroup: (leftText, rightText))
+        let firstEmoji = leftTextField.text
+        let secondEmoji = rightTextField.text
+        
+        let emojiGroup = (firstEmoji, secondEmoji)
+        emojiDelegate?.emojiGroupCreated(emojiGroup)
+        dismiss(animated: true, completion: nil)
         dismiss(animated: true, completion: nil)
     }
 }
