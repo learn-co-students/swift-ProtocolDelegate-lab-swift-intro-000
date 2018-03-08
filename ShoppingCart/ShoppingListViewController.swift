@@ -11,6 +11,9 @@ import UIKit
 
 // TODO: Create protocol here.
 
+protocol EmojiCreation {
+    func create(emojiGroup:(String,String))
+}
 
 class ShoppingViewController: UIViewController {
     
@@ -26,6 +29,8 @@ class ShoppingViewController: UIViewController {
         tableView.dataSource = self
         tableView.allowsSelection = false
     }
+    
+    
     
 }
 
@@ -43,10 +48,40 @@ extension ShoppingViewController: UITableViewDataSource {
         cell.secondEmojiLabel.text = currentEmojiLove.1
         return cell
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destVC = segue.destination as! EmojiSelectionViewController
+        destVC.emojiDelegate = self
+    }
 }
 
 // MARK: - UITableViewDelegate Methods
-extension ShoppingViewController: UITableViewDelegate { }
+extension ShoppingViewController: UITableViewDelegate,EmojiCreation {
+
+    func create(emojiGroup: (String, String)) {
+        emojis.append(emojiGroup)
+        tableView.reloadData()
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
