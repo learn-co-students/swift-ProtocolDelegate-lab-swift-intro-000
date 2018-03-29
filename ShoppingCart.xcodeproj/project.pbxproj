@@ -59,9 +59,8 @@
 			isa = PBXGroup;
 			children = (
 				7DADE31B1D3FC16800792225 /* Main.storyboard */,
-				7DDBFF4E1D5B76C80023149C /* ShoppingListViewController.swift */,
-				7DFD61AF1D5BA195000ACBE8 /* EmojiSelectionViewController.swift */,
-				7DDBFF501D5B7B6C0023149C /* EmojiCellTableViewCell.swift */,
+				A558B8AD206CD9FB00193D34 /* Controller */,
+				A558B8AE206CDA0200193D34 /* View */,
 				7DDBFF521D5B81F30023149C /* Supporting Files */,
 			);
 			path = ShoppingCart;
@@ -76,6 +75,23 @@
 				7DADE3231D3FC16800792225 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A558B8AD206CD9FB00193D34 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7DDBFF4E1D5B76C80023149C /* ShoppingListViewController.swift */,
+				7DFD61AF1D5BA195000ACBE8 /* EmojiSelectionViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		A558B8AE206CDA0200193D34 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7DDBFF501D5B7B6C0023149C /* EmojiCellTableViewCell.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
