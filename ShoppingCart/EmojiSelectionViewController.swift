@@ -9,6 +9,23 @@
 import UIKit
 
 class EmojiSelectionViewController: UIViewController {
+    //Stored properties
+    var emojiDelegate: EmojiCreation?
+    
+    
+    @IBOutlet weak var textfield1: UITextField!
+    @IBOutlet weak var textfield2: UITextField!
+    
+    @IBAction func savebutton(_ sender: Any) {
+        if let first = textfield1.text {
+            if let second = textfield2.text {
+                      let emoji: (String, String) = (first, second)
+                        emojiDelegate?.create(emojiGroup: emoji)
+            }
+        }
+        dismiss(animated: true, completion: nil)
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
