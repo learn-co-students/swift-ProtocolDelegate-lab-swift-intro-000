@@ -6,17 +6,26 @@
 //  Copyright © 2016 Gamesmith, LLC. All rights reserved.
 //
 
+
 import UIKit
 
 
-// TODO: Create protocol here.
+protocol EmojiCreation{
+    func create(emojiGroup: (String, String) )
+}
 
 
 class ShoppingViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var emojis: [(String, String)] = []
+    var emojis: [(String, String)] = []{
+   /* Instead of adding the reloadData() call on the tableView here in our code, we can add add a didSet observer to our emojis instance property where within the didSet block of code, we can call on tableView.reloadData().
+ */
+    didSet{
+    tableView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +34,10 @@ class ShoppingViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.allowsSelection = false
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        let destVC = segue.destination as! EmojiSelectionViewController
+        destVC.emojiDelegate = self
     }
     
 }
@@ -47,6 +60,19 @@ extension ShoppingViewController: UITableViewDataSource {
 
 // MARK: - UITableViewDelegate Methods
 extension ShoppingViewController: UITableViewDelegate { }
+
+extension ShoppingViewController: EmojiCreation{
+    
+    func create(emojiGroup: (String, String)) {
+        emojis.append(emojiGroup)
+        //tableView.reloadData()
+    }
+}
+/*
+ */
+
+
+
 
 
 
